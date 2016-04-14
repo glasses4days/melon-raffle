@@ -1,7 +1,7 @@
 # No code needs to be added to this file.
 
 """Process customer data."""
-
+#imports Customer class from customer.py
 from customer import Customer
 
 

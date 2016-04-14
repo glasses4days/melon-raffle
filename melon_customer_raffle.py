@@ -1,54 +1,58 @@
-from random import choice
+"""No longer need this file as it is split up into its components"""
+
+# from random import choice
+# from customer import Customer
 
 
-class Customer(object):
-    """A customer at Ubermelon."""
 
-    def __init__(self, name, email, street, city, zipcode):
-        self.name = name
-        self.email = email
-        self.street = street
-        self.city = city
-        self.zipcode = zipcode
+# class Customer(object):
+#     """A customer at Ubermelon."""
 
-
-def organize_customer_data(customer_file_path):
-    """Read customer file and return list of customer objects.
-
-    Read file at customer_file_path and create a customer object containing
-        customer information.
-
-    """
-
-    customers = []
-
-    customer_file = open(customer_file_path)
-
-    # Process a file like:
-    #
-    #   customer-name | email | street | city | zipcode
-
-    for line in customer_file:
-        customer_data = line.strip().split("|")
-        name, email, street, city, zipcode = customer_data
-
-        new_customer = Customer(name, email, street, city, zipcode)
-        customers.append(new_customer)
-
-    return customers
+#     def __init__(self, name, email, street, city, zipcode):
+#         self.name = name
+#         self.email = email
+#         self.street = street
+#         self.city = city
+#         self.zipcode = zipcode
 
 
-def pick_winner(customers):
-    """Choose a random winner from list of customers."""
+# def organize_customer_data(customer_file_path):
+#     """Read customer file and return list of customer objects.
 
-    chosen_customer = random.choice(customers)
+#     Read file at customer_file_path and create a customer object containing
+#         customer information.
 
-    print "Contact {name} at {email} to notify them they've won".format(
-        name=chosen_customer.name,
-        email=chosen_customer.email
-        )
+#     """
+
+#     customers = []
+
+#     customer_file = open(customer_file_path)
+
+#     # Process a file like:
+#     #
+#     #   customer-name | email | street | city | zipcode
+
+#     for line in customer_file:
+#         customer_data = line.strip().split("|")
+#         name, email, street, city, zipcode = customer_data
+
+#         new_customer = Customer(name, email, street, city, zipcode)
+#         customers.append(new_customer)
+
+#     return customers
 
 
-customers = organize_customer_data("customers.txt")
+# # def pick_winner(customers):
+# #     """Choose a random winner from list of customers."""
 
-pick_winner(customers)
+# #     chosen_customer = choice(customers)
+
+# #     print "Contact {name} at {email} to notify them they've won".format(
+# #         name=chosen_customer.name,
+# #         email=chosen_customer.email
+# #         )
+
+
+# customers = organize_customer_data("customers.txt")
+
+# pick_winner(customers)
